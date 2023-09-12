@@ -1,0 +1,44 @@
+### Recuperar todas las películas
+GET http://localhost:1234/movies
+
+### Recuperar una película por id
+GET http://localhost:1234/movies/5f01bcb2-eac8-4389-a3f4-7a6d7b13a6fe
+
+### Recuperar todas las películas por un género
+GET http://localhost:1234/movies?genre=DRAMA
+
+### Crear una película con POST
+POST http://localhost:1234/movies
+Content-Type: application/json
+
+{
+  "title": "Pulp Fiction",
+  "year": 1994,
+  "director": "Quentin Tarantino",
+  "duration": 154,
+  "poster": "https://www.themoviedb.org/t/p/original/vQWk5YBFWF4bZaofAbv0tShwBvQ.jpg",
+  "genre": ["Crime", "Drama"],
+  "rate": 8.9
+}
+
+### Borrar una película
+DELETE http://localhost:1234/movies/77fae46a-3901-4e7a-a6ce-ea876c62e401
+
+### Actualizar una película
+PATCH http://localhost:1234/movies/b9a8fc0f-6cb3-4a72-8e79-cd3f12927264
+Content-Type: application/json
+
+{
+  "title": " Batman The Dark Knight",
+  "year": 2010,
+  "director": "Christopher Nolan",
+  "duration": 200,
+  "poster": "https://i.ebayimg.com/images/g/yokAAOSw8w1YARbm/s-l1200.jpg",
+  "rate": 3.0,
+  "genre": [
+    "Action",
+    "Crime",
+    "Drama",
+    "Romance"
+  ]
+}
